@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: "Roboto", sans-serif; */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body{
+  background-color: #e3f2fd;
+
+}
+.container{
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 8px;
+  margin: 80px auto 30px;
+}
+.select-btn{
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.select-btn .btn-text{
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+}
+.select-btn .arrow-dwn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21px;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 50%;
+  background-color: #6e93f7;
+  transition: 0.3s;
+
+}
+
+.material-symbols-outlined{
+  /* transform: translateY(5px); */
+}
+.arrow-dwn span{
+  color: #fff;
+  transform: translateY(1.4px);
+}
+.select-btn.open .arrow-dwn{
+  transform: rotate(-180deg);
+}
+.list-items{
+  position: relative;
+  margin-top: 15px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+.select-btn.open ~ .list-items{
+  display: block;
+}
+.list-items .item{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+  transform: 0.3s;
+  padding: 0 15px;
+  border-radius: 8px;
+}
+.list-items .item:hover{
+  background-color: #e7edef;
+}
+.item .item-text{
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+.item .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #c0c0c0;
+  display: inline-block;
+  border-radius: 4px;
+  margin-right: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.item.checked .checkbox{
+  background-color: #6e93f7;
+  border-color: #6e93f7;
+}
+.checkbox span{
+  font-size: 11px;
+  display: inline-block;
+  transform: scale(0) translate(1px, -5px);
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+
+}
+.item.checked .checkbox span{
+  transform: scale(1) translate(1px, -2px);
+}
